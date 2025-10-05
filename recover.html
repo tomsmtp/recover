@@ -24,9 +24,14 @@
       text-align: center;
     }
     h2 {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
       color: #222;
       font-weight: 500;
+    }
+    .info {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.5rem;
     }
     input[type="password"] {
       width: 100%;
@@ -68,6 +73,10 @@
 <body>
   <div class="container">
     <h2>Redefinir senha</h2>
+    <div class="info">
+      O link de recuperação é válido por <strong>5 minutos</strong>.<br>
+      Após esse tempo, solicite um novo link.
+    </div>
     <form id="resetForm" autocomplete="off">
       <input type="password" id="senha" placeholder="Nova senha (máx. 5 dígitos)" maxlength="5" pattern="\d{1,5}" required>
       <button type="submit">Atualizar senha</button>
