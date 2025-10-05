@@ -84,7 +84,7 @@
         document.getElementById('msg').innerText = "A senha deve conter até 5 dígitos numéricos.";
         return;
       }
-      const res = await fetch(`https://aplicativomandioca.pages.dev/reset?token=${token}&senha=${senha}`);
+      const res = await fetch(`https://banner-belief-regulatory-mixing.trycloudflare.com/reset?token=${token}&senha=${senha}`);
       const data = await res.json();
       if (data.status === 'ok') {
         document.getElementById('msg').innerText = "Senha redefinida com sucesso! Obrigado!";
