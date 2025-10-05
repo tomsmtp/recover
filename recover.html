@@ -78,7 +78,7 @@
       Após esse tempo, solicite um novo link.
     </div>
     <form id="resetForm" autocomplete="off">
-      <input type="password" id="senha" placeholder="Nova senha (máx. 5 dígitos)" maxlength="5" pattern="\d{1,5}" required>
+      <input type="password" id="senha" placeholder="Nova senha (máx. 5 caracteres)" maxlength="5" required>
       <button type="submit">Atualizar senha</button>
     </form>
     <div id="msg"></div>
@@ -89,8 +89,8 @@
     document.getElementById('resetForm').onsubmit = async function(e) {
       e.preventDefault();
       const senha = document.getElementById('senha').value;
-      if (!/^\d{1,5}$/.test(senha)) {
-        document.getElementById('msg').innerText = "A senha deve conter até 5 dígitos numéricos.";
+      if (senha.length < 1 || senha.length > 5) {
+        document.getElementById('msg').innerText = "A senha deve conter de 1 a 5 caracteres.";
         return;
       }
       const res = await fetch(`https://halo-biology-jam-possession.trycloudflare.com/reset?token=${token}&senha=${senha}`);
