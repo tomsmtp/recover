@@ -93,7 +93,7 @@
         document.getElementById('msg').innerText = "A senha deve conter de 1 a 5 caracteres.";
         return;
       }
-      const res = await fetch(`https://supervisors-geek-crystal-complications.trycloudflare.com/reset?token=${token}&senha=${senha}`);
+      const res = await fetch(`https://potter-technical-thickness-cases.trycloudflare.com/reset?token=${token}&senha=${senha}`);
       const data = await res.json();
       if (data.status === 'ok') {
         document.getElementById('msg').innerText = "Senha redefinida com sucesso! Obrigado!";
